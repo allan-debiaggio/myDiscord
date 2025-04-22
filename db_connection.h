@@ -1,7 +1,7 @@
 #ifndef DB_CONNECTION_H
 #define DB_CONNECTION_H
 
-#include <libpq-fe.h>
+#include <postgresql@14/libpq-fe.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
