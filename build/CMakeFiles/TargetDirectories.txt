@@ -1,0 +1,3 @@
+C:/Users/titaL/Documents/GitHub/myDiscord/build/CMakeFiles/client.dir
+C:/Users/titaL/Documents/GitHub/myDiscord/build/CMakeFiles/edit_cache.dir
+C:/Users/titaL/Documents/GitHub/myDiscord/build/CMakeFiles/rebuild_cache.dir
