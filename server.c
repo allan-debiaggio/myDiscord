@@ -1,14 +1,33 @@
 #include "common.h"
+#include "db_connection.h"
 #include <signal.h>
 
 void handle_client(int client_fd, struct sockaddr_in client_addr)
 {
   char buffer[MAX_BUFFER_SIZE];
   struct json_object *json_msg;
+  PGconn *db_conn = connect_to_database();
+
+  if (!db_conn)
+  {
+    printf("Failed to connect to database for client %s:%d\n",
+           inet_ntoa(client_addr.sin_addr),
+           ntohs(client_addr.sin_port));
+    close(client_fd);
+    exit(1);
+  }
 
   printf("New client connected from %s:%d\n",
          inet_ntoa(client_addr.sin_addr),
          ntohs(client_addr.sin_port));
+
+  // Send database connection status to client
+  struct json_object *status_msg = json_object_new_object();
+  json_object_object_add(status_msg, "type", json_object_new_int(MSG_CONNECT));
+  json_object_object_add(status_msg, "content", json_object_new_string("Connected to server and database"));
+  const char *status_str = json_object_to_json_string(status_msg);
+  send(client_fd, status_str, strlen(status_str), 0);
+  json_object_put(status_msg);
 
   while (1)
   {
@@ -53,6 +72,7 @@ void handle_client(int client_fd, struct sockaddr_in client_addr)
     }
   }
 
+  close_database_connection(db_conn);
   close(client_fd);
   exit(0);
 }
@@ -62,6 +82,16 @@ int main()
   int server_fd, client_fd;
   struct sockaddr_in server_addr, client_addr;
   socklen_t client_len = sizeof(client_addr);
+
+  // Test database connection first
+  PGconn *db_conn = connect_to_database();
+  if (!db_conn)
+  {
+    printf("Failed to connect to database. Server startup aborted.\n");
+    return 1;
+  }
+  printf("Database connection successful. Server starting...\n");
+  close_database_connection(db_conn);
 
   // Ignore SIGCHLD to prevent zombie processes
   signal(SIGCHLD, SIG_IGN);
