@@ -11,7 +11,7 @@
 #include <arpa/inet.h>
 #include <json-c/json.h>
 
-#define SERVER_PORT 8080
+#define SERVER_PORT 8081
 #define MAX_BUFFER_SIZE 1024
 #define MAX_CLIENTS 10
 
@@ -26,5 +26,8 @@ typedef struct
   int type;
   char content[MAX_BUFFER_SIZE];
 } Message;
+
+// Function declarations
+void send_error_response(int client_fd, const char *error_message);
 
 #endif // COMMON_H
