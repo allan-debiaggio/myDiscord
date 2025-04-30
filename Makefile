@@ -1,39 +1,59 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -I/usr/local/include -I/opt/homebrew/include -I/opt/homebrew/opt/json-c/include -I/opt/homebrew/Cellar/postgresql@14/14.17_1/include -I/opt/homebrew/opt/openssl@3/include
-LDFLAGS = -L/usr/local/lib -L/opt/homebrew/opt/json-c/lib -L/opt/homebrew/lib/postgresql@14 -L/opt/homebrew/opt/openssl@3/lib -ljson-c -lpq -lcrypto
+CFLAGS = -Wall -Wextra -g -pthread
+LDFLAGS = -pthread
 
-SRCS = server.c db_connection.c db_operations.c auth.c
-OBJS = $(SRCS:.c=.o)
-TEST_SRCS = test_db.c db_connection.c db_operations.c
-TEST_OBJS = $(TEST_SRCS:.c=.o)
-TEST_DB_OPS_SRCS = test_db_operations.c db_connection.c db_operations.c
-TEST_DB_OPS_OBJS = $(TEST_DB_OPS_SRCS:.c=.o)
-TEST_AUTH_SRCS = test_auth.c db_connection.c db_operations.c auth.c
-TEST_AUTH_OBJS = $(TEST_AUTH_SRCS:.c=.o)
-CLIENT_SRCS = client.c client_auth.c
-CLIENT_OBJS = $(CLIENT_SRCS:.c=.o)
+# Uncomment to enable PostgreSQL
+USE_POSTGRES = 1
 
-all: server test_db test_db_operations test_auth client
+# PostgreSQL paths - updated with various potential paths for Mac/Linux
+ifdef USE_POSTGRES
+  # Use specific homebrew paths for libpq on Mac
+  PG_CFLAGS = -I/opt/homebrew/opt/libpq/include -DUSE_POSTGRES
+  PG_LDFLAGS = -L/opt/homebrew/opt/libpq/lib -lpq
+else
+  PG_CFLAGS = 
+  PG_LDFLAGS = 
+endif
 
-server: $(OBJS)
-	$(CC) $(OBJS) -o server $(LDFLAGS)
+GTK_CFLAGS = $(shell pkg-config --cflags gtk+-3.0)
+GTK_LDFLAGS = $(shell pkg-config --libs gtk+-3.0)
+JSON_CFLAGS = $(shell pkg-config --cflags json-c)
+JSON_LDFLAGS = $(shell pkg-config --libs json-c)
 
-test_db: $(TEST_OBJS)
-	$(CC) $(TEST_OBJS) -o test_db $(LDFLAGS)
+SERVER_SRC = src/server/main.c src/server/server.c src/common/utils.c src/common/auth.c src/common/json_protocol.c
+CLIENT_SRC = src/client/main.c src/client/client.c src/common/utils.c src/common/auth.c src/common/json_protocol.c
+GTK_CLIENT_SRC = src/client/gtk_main.c src/client/gtk_client.c src/client/client.c src/common/utils.c src/common/auth.c src/common/json_protocol.c
+DB_SRC = src/db/database.c
 
-test_db_operations: $(TEST_DB_OPS_OBJS)
-	$(CC) $(TEST_DB_OPS_OBJS) -o test_db_operations $(LDFLAGS)
+SERVER_OBJ = $(SERVER_SRC:.c=.o)
+CLIENT_OBJ = $(CLIENT_SRC:.c=.o)
+GTK_CLIENT_OBJ = $(GTK_CLIENT_SRC:.c=.o)
+DB_OBJ = $(DB_SRC:.c=.o)
 
-test_auth: $(TEST_AUTH_OBJS)
-	$(CC) $(TEST_AUTH_OBJS) -o test_auth $(LDFLAGS)
+all: server client gtk_client
 
-client: $(CLIENT_OBJS)
-	$(CC) $(CLIENT_OBJS) -o client $(LDFLAGS)
+server: $(SERVER_OBJ) $(DB_OBJ)
+	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS) $(PG_LDFLAGS) $(JSON_LDFLAGS)
 
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+client: $(CLIENT_OBJ) $(DB_OBJ)
+	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS) $(PG_LDFLAGS) $(JSON_LDFLAGS)
+
+gtk_client: $(GTK_CLIENT_OBJ) $(DB_OBJ)
+	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS) $(PG_LDFLAGS) $(GTK_LDFLAGS) $(JSON_LDFLAGS)
+
+src/server/%.o: src/server/%.c
+	$(CC) $(CFLAGS) $(PG_CFLAGS) $(JSON_CFLAGS) -I./include -c $< -o $@
+
+src/client/%.o: src/client/%.c
+	$(CC) $(CFLAGS) $(PG_CFLAGS) $(GTK_CFLAGS) $(JSON_CFLAGS) -I./include -c $< -o $@
+
+src/common/%.o: src/common/%.c
+	$(CC) $(CFLAGS) $(PG_CFLAGS) $(JSON_CFLAGS) -I./include -c $< -o $@
+
+src/db/%.o: src/db/%.c
+	$(CC) $(CFLAGS) $(PG_CFLAGS) -I./include -c $< -o $@
 
 clean:
-	rm -f $(OBJS) $(TEST_OBJS) $(TEST_DB_OPS_OBJS) $(TEST_AUTH_OBJS) $(CLIENT_OBJS) server test_db test_db_operations test_auth client
+	rm -f $(SERVER_OBJ) $(CLIENT_OBJ) $(GTK_CLIENT_OBJ) $(DB_OBJ) server client gtk_client
 
 .PHONY: all clean 

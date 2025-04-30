@@ -1,0 +1,124 @@
+/* Dark theme for the chat messenger */
+
+/* General window styling */
+window {
+  background-color: #36393f;
+  color: #dcddde;
+}
+
+/* Header bar styling */
+headerbar {
+  background-color: #202225;
+  color: #ffffff;
+  border-bottom: 1px solid #111111;
+}
+
+/* Text styling */
+textview,
+text {
+  background-color: #40444b;
+  color: #dcddde;
+  font-family: 'Ubuntu', 'Cantarell', sans-serif;
+  font-size: 14px;
+}
+
+/* Text entry */
+entry {
+  background-color: #40444b;
+  color: #dcddde;
+  border: 1px solid #202225;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+/* Scrollbar styling */
+scrollbar {
+  background-color: #2e3136;
+  border: none;
+}
+
+scrollbar slider {
+  background-color: #72767d;
+  border-radius: 10px;
+  min-width: 8px;
+  min-height: 8px;
+}
+
+scrollbar slider:hover {
+  background-color: #dcddde;
+}
+
+/* Button styling - Updated to darker color with stronger hover effect */
+button {
+  background-color: #1e1f22;
+  color: #b9bbbe;
+  border: none;
+  border-radius: 3px;
+  padding: 8px 16px;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background-color: #2a2c31;
+  color: #ffffff;
+  transform: scale(1.03);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+  background-color: #141517;
+  color: #ffffff;
+  transform: scale(0.98);
+}
+
+/* Status bar */
+statusbar {
+  background-color: #2f3136;
+  color: #b9bbbe;
+  font-size: 12px;
+  padding: 4px;
+}
+
+/* User list */
+list {
+  background-color: #2f3136;
+  color: #dcddde;
+}
+
+list row {
+  padding: 6px 10px;
+}
+
+list row:selected {
+  background-color: #393c42;
+}
+
+/* Special message types */
+.status-message {
+  color: #72767d;
+  font-style: italic;
+}
+
+.own-message {
+  color: #dcddde;
+  background-color: #32353b;
+}
+
+.other-message {
+  color: #dcddde;
+  background-color: #40444b;
+}
+
+/* User status indicators */
+.status-online {
+  color: #43b581;
+}
+
+.status-offline {
+  color: #747f8d;
+}
+
+/* Error messages */
+.error-message {
+  color: #f04747;
+}
