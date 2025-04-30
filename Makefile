@@ -1,59 +1,38 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -g -pthread
-LDFLAGS = -pthread
+CFLAGS = -Wall -Wextra
 
-# Uncomment to enable PostgreSQL
-USE_POSTGRES = 1
+# Full application with all dependencies
+all: server client
 
-# PostgreSQL paths - updated with various potential paths for Mac/Linux
-ifdef USE_POSTGRES
-  # Use specific homebrew paths for libpq on Mac
-  PG_CFLAGS = -I/opt/homebrew/opt/libpq/include -DUSE_POSTGRES
-  PG_LDFLAGS = -L/opt/homebrew/opt/libpq/lib -lpq
-else
-  PG_CFLAGS = 
-  PG_LDFLAGS = 
-endif
+server: src/server.c src/security.c
+	$(CC) $(CFLAGS) -o mydiscord-server src/server.c src/security.c `pkg-config --libs gtk+-3.0` -lpq -lbcrypt -lcrypto
 
-GTK_CFLAGS = $(shell pkg-config --cflags gtk+-3.0)
-GTK_LDFLAGS = $(shell pkg-config --libs gtk+-3.0)
-JSON_CFLAGS = $(shell pkg-config --cflags json-c)
-JSON_LDFLAGS = $(shell pkg-config --libs json-c)
+client: src/ui.c
+	$(CC) $(CFLAGS) -o mydiscord-client src/ui.c `pkg-config --libs gtk+-3.0`
 
-SERVER_SRC = src/server/main.c src/server/server.c src/common/utils.c src/common/auth.c src/common/json_protocol.c
-CLIENT_SRC = src/client/main.c src/client/client.c src/common/utils.c src/common/auth.c src/common/json_protocol.c
-GTK_CLIENT_SRC = src/client/gtk_main.c src/client/gtk_client.c src/client/client.c src/common/utils.c src/common/auth.c src/common/json_protocol.c
-DB_SRC = src/db/database.c
+# Simple test client without GTK dependency
+test_client: src/test_client.c
+	$(CC) $(CFLAGS) -o mydiscord-test-client src/test_client.c -pthread
 
-SERVER_OBJ = $(SERVER_SRC:.c=.o)
-CLIENT_OBJ = $(CLIENT_SRC:.c=.o)
-GTK_CLIENT_OBJ = $(GTK_CLIENT_SRC:.c=.o)
-DB_OBJ = $(DB_SRC:.c=.o)
+# Target for compiling with mock database functionality (no PostgreSQL dependency)
+mock: src/server_mock.c
+	$(CC) $(CFLAGS) -o mydiscord-server-mock src/server_mock.c -pthread
 
-all: server client gtk_client
-
-server: $(SERVER_OBJ) $(DB_OBJ)
-	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS) $(PG_LDFLAGS) $(JSON_LDFLAGS)
-
-client: $(CLIENT_OBJ) $(DB_OBJ)
-	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS) $(PG_LDFLAGS) $(JSON_LDFLAGS)
-
-gtk_client: $(GTK_CLIENT_OBJ) $(DB_OBJ)
-	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS) $(PG_LDFLAGS) $(GTK_LDFLAGS) $(JSON_LDFLAGS)
-
-src/server/%.o: src/server/%.c
-	$(CC) $(CFLAGS) $(PG_CFLAGS) $(JSON_CFLAGS) -I./include -c $< -o $@
-
-src/client/%.o: src/client/%.c
-	$(CC) $(CFLAGS) $(PG_CFLAGS) $(GTK_CFLAGS) $(JSON_CFLAGS) -I./include -c $< -o $@
-
-src/common/%.o: src/common/%.c
-	$(CC) $(CFLAGS) $(PG_CFLAGS) $(JSON_CFLAGS) -I./include -c $< -o $@
-
-src/db/%.o: src/db/%.c
-	$(CC) $(CFLAGS) $(PG_CFLAGS) -I./include -c $< -o $@
+# Setup for when PostgreSQL is properly configured
+setup_db:
+	createdb mydiscord_test
+	psql mydiscord_test -f myDiscord.sql
+	psql mydiscord_test -f test_data.sql
 
 clean:
-	rm -f $(SERVER_OBJ) $(CLIENT_OBJ) $(GTK_CLIENT_OBJ) $(DB_OBJ) server client gtk_client
+	rm -f mydiscord-server mydiscord-client mydiscord-server-mock mydiscord-test-client
 
-.PHONY: all clean 
+# Simple test without GTK or PostgreSQL dependencies
+test_simple: mock test_client
+	@echo "Starting mock server..."
+	@./mydiscord-server-mock &
+	@sleep 1
+	@echo "Starting test client..."
+	@./mydiscord-test-client
+
+.PHONY: all clean setup_db test_simple mock test_client 

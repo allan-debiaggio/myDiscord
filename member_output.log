@@ -1,0 +1,42 @@
+[LOG] Attempting to connect to server...
+[LOG] Connected to server successfully!
+Enter username: Enter password: 
+[LOG] Waiting for server authentication...
+Server: Welcome to MyDiscord! You are now connected.
+
+[SYSTEM] Successfully logged in. You're now in #general channel.
+
+=== MyDiscord Command Help ===
+Available commands for your role (Guest):
+
+General Commands:
+/help           - Display this help message
+/channel <name> - Switch to specified channel
+/list           - List available channels
+/users          - List users in current channel
+/msg <user>     - Send private message to user
+/quit           - Exit the application
+
+Any other text will be sent as a message
+==============================
+
+
+Chat started. Type messages or commands (start with /)...
+[testuser(Guest):#general]> 
+=== MyDiscord Command Help ===
+Available commands for your role (Guest):
+
+General Commands:
+/help           - Display this help message
+/channel <name> - Switch to specified channel
+/list           - List available channels
+/users          - List users in current channel
+/msg <user>     - Send private message to user
+/quit           - Exit the application
+
+Any other text will be sent as a message
+==============================
+
+[testuser(Guest):#general]> 
+[SYSTEM] Your role has been updated to: Member
+Server disconnected

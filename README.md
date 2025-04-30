@@ -1,41 +1,96 @@
-# Discord-like Chat Messenger
+# MyDiscord - Discord-like Chat Application
 
-A real-time chat messenger application developed in C with GTK interface and PostgreSQL integration.
+A C-based real-time chat application similar to Discord, built using PostgreSQL and GTK.
 
-## Features (Planned)
+## Prerequisites
 
-- TCP socket-based communication
-- Multiple concurrent client connections
-- GTK-based user interface with dark theme
-- PostgreSQL database for message persistence
-- User authentication system
-- JSON-based communication protocol
+- C compiler (GCC recommended)
+- PostgreSQL
+- GTK3 development libraries
+- libpq (PostgreSQL client library)
+- OpenSSL development libraries
+- libbcrypt (for password hashing)
 
-## Building
+### Installation on macOS
 
+```bash
+# Install dependencies using Homebrew
+brew install postgresql
+brew install gtk+3
+brew install openssl
+brew install libbcrypt
+```
+
+### Installation on Linux (Ubuntu/Debian)
+
+```bash
+# Install dependencies
+sudo apt-get update
+sudo apt-get install -y build-essential libgtk-3-dev postgresql postgresql-contrib libpq-dev libssl-dev libbcrypt-dev
+```
+
+## Setting Up
+
+1. Clone the repository
+```bash
+git clone https://github.com/yourusername/mydiscord.git
+cd mydiscord
+```
+
+2. Set up the database
+```bash
+make setup_db
+```
+
+This will:
+- Create a test database called "mydiscord_test"
+- Set up the database schema
+- Insert test data
+
+## Compilation
+
+Compile the project using:
 ```bash
 make
 ```
 
-## Running
+This will build both the server and client applications.
 
-### Server
+## Running the Test
+
+To run a quick test of the application:
 ```bash
-./server
+make test
 ```
 
-### Client
+This will start the server in the background and launch the client.
+
+## Manual Testing
+
+1. Start the server:
 ```bash
-./client
+./mydiscord-server
 ```
 
-## Project Structure
+2. In a new terminal, start the client:
+```bash
+./mydiscord-client
+```
 
-- `src/` - Source code
-  - `server/` - Server implementation
-  - `client/` - Client implementation
-  - `common/` - Shared functionality
-  - `db/` - Database interaction
-- `include/` - Header files
-- `assets/` - Resources for the GTK interface
-- `sql/` - SQL scripts for database setup 
+3. Use these test credentials:
+   - Username: testuser
+   - Password: password
+
+## Features Being Tested
+
+- Database connection
+- Server-client socket communication
+- User login
+- Real-time message sending/receiving
+- Basic UI functionality
+
+## Troubleshooting
+
+- If you encounter GTK warnings, you may need to update your GTK installation
+- Database connection issues: Make sure PostgreSQL is running with `brew services start postgresql` or `sudo service postgresql start`
+- On macOS, if you encounter library loading issues, you may need to set DYLD_LIBRARY_PATH to include the PostgreSQL lib directory 

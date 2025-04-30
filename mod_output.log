@@ -1,0 +1,51 @@
+[LOG] Attempting to connect to server...
+[LOG] Connected to server successfully!
+Enter username: Enter password: 
+[LOG] Waiting for server authentication...
+Server: Welcome to MyDiscord! You are now connected.
+
+[SYSTEM] Successfully logged in. You're now in #general channel.
+
+=== MyDiscord Command Help ===
+Available commands for your role (Guest):
+
+General Commands:
+/help           - Display this help message
+/channel <name> - Switch to specified channel
+/list           - List available channels
+/users          - List users in current channel
+/msg <user>     - Send private message to user
+/quit           - Exit the application
+
+Any other text will be sent as a message
+==============================
+
+
+Chat started. Type messages or commands (start with /)...
+[testuser(Guest):#general]> 
+[SYSTEM] Your role has been updated to: Moderator
+
+=== MyDiscord Command Help ===
+Available commands for your role (Mod):
+
+General Commands:
+/help           - Display this help message
+/channel <name> - Switch to specified channel
+/list           - List available channels
+/users          - List users in current channel
+/msg <user>     - Send private message to user
+/quit           - Exit the application
+
+Member Commands:
+/react <id> <emoji> - React to message with ID
+
+Moderator Commands:
+/kick <user>      - Kick user from channel
+/mute <user> <duration> - Mute user for specified duration
+
+Any other text will be sent as a message
+==============================
+
+[testuser(Mod):#general]> [SYSTEM] Kicking user: baduser
+[testuser(Mod):#general]> Server: [ERROR] User baduser not found
+Server disconnected
