@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/titaL/Documents/GitHub/myDiscord/client/src/interface.c" "CMakeFiles/client.dir/client/src/interface.c.obj" "gcc" "CMakeFiles/client.dir/client/src/interface.c.obj.d"
+  "C:/Users/titaL/Documents/GitHub/myDiscord/client/src/GTK4/main_ui.c" "CMakeFiles/client.dir/client/src/GTK4/main_ui.c.obj" "gcc" "CMakeFiles/client.dir/client/src/GTK4/main_ui.c.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

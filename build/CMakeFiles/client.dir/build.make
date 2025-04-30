@@ -71,29 +71,29 @@ include CMakeFiles/client.dir/flags.make
 CMakeFiles/client.dir/codegen:
 .PHONY : CMakeFiles/client.dir/codegen
 
-CMakeFiles/client.dir/client/src/interface.c.obj: CMakeFiles/client.dir/flags.make
-CMakeFiles/client.dir/client/src/interface.c.obj: CMakeFiles/client.dir/includes_C.rsp
-CMakeFiles/client.dir/client/src/interface.c.obj: C:/Users/titaL/Documents/GitHub/myDiscord/client/src/interface.c
-CMakeFiles/client.dir/client/src/interface.c.obj: CMakeFiles/client.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\titaL\Documents\GitHub\myDiscord\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/client.dir/client/src/interface.c.obj"
-	C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/client.dir/client/src/interface.c.obj -MF CMakeFiles\client.dir\client\src\interface.c.obj.d -o CMakeFiles\client.dir\client\src\interface.c.obj -c C:\Users\titaL\Documents\GitHub\myDiscord\client\src\interface.c
+CMakeFiles/client.dir/client/src/GTK4/main_ui.c.obj: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/client/src/GTK4/main_ui.c.obj: CMakeFiles/client.dir/includes_C.rsp
+CMakeFiles/client.dir/client/src/GTK4/main_ui.c.obj: C:/Users/titaL/Documents/GitHub/myDiscord/client/src/GTK4/main_ui.c
+CMakeFiles/client.dir/client/src/GTK4/main_ui.c.obj: CMakeFiles/client.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\titaL\Documents\GitHub\myDiscord\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/client.dir/client/src/GTK4/main_ui.c.obj"
+	C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/client.dir/client/src/GTK4/main_ui.c.obj -MF CMakeFiles\client.dir\client\src\GTK4\main_ui.c.obj.d -o CMakeFiles\client.dir\client\src\GTK4\main_ui.c.obj -c C:\Users\titaL\Documents\GitHub\myDiscord\client\src\GTK4\main_ui.c
 
-CMakeFiles/client.dir/client/src/interface.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/client.dir/client/src/interface.c.i"
-	C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\titaL\Documents\GitHub\myDiscord\client\src\interface.c > CMakeFiles\client.dir\client\src\interface.c.i
+CMakeFiles/client.dir/client/src/GTK4/main_ui.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/client.dir/client/src/GTK4/main_ui.c.i"
+	C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\titaL\Documents\GitHub\myDiscord\client\src\GTK4\main_ui.c > CMakeFiles\client.dir\client\src\GTK4\main_ui.c.i
 
-CMakeFiles/client.dir/client/src/interface.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/client.dir/client/src/interface.c.s"
-	C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\titaL\Documents\GitHub\myDiscord\client\src\interface.c -o CMakeFiles\client.dir\client\src\interface.c.s
+CMakeFiles/client.dir/client/src/GTK4/main_ui.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/client.dir/client/src/GTK4/main_ui.c.s"
+	C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\titaL\Documents\GitHub\myDiscord\client\src\GTK4\main_ui.c -o CMakeFiles\client.dir\client\src\GTK4\main_ui.c.s
 
 # Object files for target client
 client_OBJECTS = \
-"CMakeFiles/client.dir/client/src/interface.c.obj"
+"CMakeFiles/client.dir/client/src/GTK4/main_ui.c.obj"
 
 # External object files for target client
 client_EXTERNAL_OBJECTS =
 
-client.exe: CMakeFiles/client.dir/client/src/interface.c.obj
+client.exe: CMakeFiles/client.dir/client/src/GTK4/main_ui.c.obj
 client.exe: CMakeFiles/client.dir/build.make
 client.exe: CMakeFiles/client.dir/linkLibs.rsp
 client.exe: CMakeFiles/client.dir/objects1.rsp

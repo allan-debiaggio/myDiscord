@@ -1,0 +1,42 @@
+.window {
+    background-image: url("../../GTK4/model/register_background.png");
+    background-repeat: no-repeat;
+    background-size: 800px 600px;
+    background-position: center;
+}
+
+entry {
+    background-color: rgba(44, 44, 44, 0.95);
+    border: none;
+    border-radius: 25px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    color: rgb(245, 245, 245);
+    min-height: 45px;
+    font-size: 14px;
+}
+
+entry:focus {
+    background-color: rgba(54, 54, 54, 0.95);
+    outline: none;
+}
+
+.login-box {
+    background-color: rgba(77, 77, 77, 0.95);
+    border-radius: 15px;
+    padding: 30px;
+    margin: 20px;
+    min-width: 320px;
+}
+
+.logo-box {
+    min-width: 200px;
+    min-height: 60px;
+    margin: 0;
+    padding: 0;
+}
+
+.logo-box picture {
+    min-width: 100%;
+    min-height: 100%;
+}

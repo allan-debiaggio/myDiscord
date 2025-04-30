@@ -1,0 +1,33 @@
+.frame-register-1 {
+    background-color: rgba(77, 77, 77, 0.95);
+    border-radius: 15px;
+    padding: 30px;
+    margin: 20px;
+    min-width: 320px;
+}
+
+entry {
+    background-color: rgba(44, 44, 44, 0.95);
+    border: none;
+    border-radius: 25px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    color: rgb(245, 245, 245);
+    min-height: 45px;
+    font-size: 14px;
+}
+
+button {
+    background-color: rgba(44, 44, 44, 0.95);
+    border: none;
+    border-radius: 20px;
+    padding: 10px 30px;
+    min-width: 100px;
+    min-height: 40px;
+    color: rgb(245, 245, 245);
+    font-size: 14px;
+}
+
+window {
+    background: radial-gradient(circle at center, #4a1212 0%, #1a1a1a 100%);
+}

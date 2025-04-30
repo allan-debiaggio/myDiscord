@@ -128,29 +128,29 @@ client/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\client.dir\build.make CMakeFiles/client.dir/build
 .PHONY : client/fast
 
-client/src/interface.obj: client/src/interface.c.obj
-.PHONY : client/src/interface.obj
+client/src/GTK4/main_ui.obj: client/src/GTK4/main_ui.c.obj
+.PHONY : client/src/GTK4/main_ui.obj
 
 # target to build an object file
-client/src/interface.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\client.dir\build.make CMakeFiles/client.dir/client/src/interface.c.obj
-.PHONY : client/src/interface.c.obj
+client/src/GTK4/main_ui.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\client.dir\build.make CMakeFiles/client.dir/client/src/GTK4/main_ui.c.obj
+.PHONY : client/src/GTK4/main_ui.c.obj
 
-client/src/interface.i: client/src/interface.c.i
-.PHONY : client/src/interface.i
+client/src/GTK4/main_ui.i: client/src/GTK4/main_ui.c.i
+.PHONY : client/src/GTK4/main_ui.i
 
 # target to preprocess a source file
-client/src/interface.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\client.dir\build.make CMakeFiles/client.dir/client/src/interface.c.i
-.PHONY : client/src/interface.c.i
+client/src/GTK4/main_ui.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\client.dir\build.make CMakeFiles/client.dir/client/src/GTK4/main_ui.c.i
+.PHONY : client/src/GTK4/main_ui.c.i
 
-client/src/interface.s: client/src/interface.c.s
-.PHONY : client/src/interface.s
+client/src/GTK4/main_ui.s: client/src/GTK4/main_ui.c.s
+.PHONY : client/src/GTK4/main_ui.s
 
 # target to generate assembly for a file
-client/src/interface.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\client.dir\build.make CMakeFiles/client.dir/client/src/interface.c.s
-.PHONY : client/src/interface.c.s
+client/src/GTK4/main_ui.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\client.dir\build.make CMakeFiles/client.dir/client/src/GTK4/main_ui.c.s
+.PHONY : client/src/GTK4/main_ui.c.s
 
 # Help Target
 help:
@@ -161,9 +161,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... client
-	@echo ... client/src/interface.obj
-	@echo ... client/src/interface.i
-	@echo ... client/src/interface.s
+	@echo ... client/src/GTK4/main_ui.obj
+	@echo ... client/src/GTK4/main_ui.i
+	@echo ... client/src/GTK4/main_ui.s
 .PHONY : help
 
 

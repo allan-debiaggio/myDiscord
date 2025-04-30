@@ -1,8 +1,8 @@
 [
 {
   "directory": "C:/Users/titaL/Documents/GitHub/myDiscord/build",
-  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DLIBDEFLATE_DLL @CMakeFiles/client.dir/includes_C.rsp -g -std=gnu11   -mfpmath=sse -msse -msse2 -o CMakeFiles\\client.dir\\client\\src\\interface.c.obj -c C:\\Users\\titaL\\Documents\\GitHub\\myDiscord\\client\\src\\interface.c",
-  "file": "C:/Users/titaL/Documents/GitHub/myDiscord/client/src/interface.c",
-  "output": "CMakeFiles/client.dir/client/src/interface.c.obj"
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DLIBDEFLATE_DLL @CMakeFiles/client.dir/includes_C.rsp -g -std=gnu11   -mfpmath=sse -msse -msse2 -o CMakeFiles\\client.dir\\client\\src\\GTK4\\main_ui.c.obj -c C:\\Users\\titaL\\Documents\\GitHub\\myDiscord\\client\\src\\GTK4\\main_ui.c",
+  "file": "C:/Users/titaL/Documents/GitHub/myDiscord/client/src/GTK4/main_ui.c",
+  "output": "CMakeFiles/client.dir/client/src/GTK4/main_ui.c.obj"
 }
 ]
