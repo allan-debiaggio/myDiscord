@@ -1,0 +1,177 @@
+Database integration enabled
+Using port 8082
+[LOG] Starting server on port 8082...
+[LOG] Database integration: ENABLED
+[LOG] Starting server with database integration...
+[LOG] db_connect: Connecting to PostgreSQL database...
+[LOG] Connected to database successfully
+[LOG] db_init: Initializing database tables...
+[LOG] db_init: Creating users table...
+NOTICE:  relation "users" already exists, skipping
+[LOG] db_init: Users table created or already exists
+[LOG] db_init: Creating channels table...
+NOTICE:  relation "channels" already exists, skipping
+[LOG] db_init: Channels table created or already exists
+[LOG] db_init: Creating messages table...
+NOTICE:  relation "messages" already exists, skipping
+[LOG] db_init: Messages table created or already exists
+[LOG] db_init: Creating muted_users table...
+NOTICE:  relation "muted_users" already exists, skipping
+[LOG] db_init: Muted_users table created or already exists
+[LOG] db_init: Ensuring general channel exists...
+[LOG] db_init: General channel created or already exists
+[LOG] db_init: Creating test users if they don't exist...
+[LOG] db_init: Database tables verified successfully
+[LOG] Database connection successful and tables verified
+[LOG] load_users_from_db: Loading users from database...
+[LOG] load_users_from_db: Found 9 users in database
+[LOG] Loaded user: test_user (ID: 1, Role: 1)
+[LOG] Loaded user: testuser (ID: 2, Role: 1)
+[LOG] Loaded user: alice (ID: 3, Role: 1)
+[LOG] Loaded user: bob (ID: 4, Role: 1)
+[LOG] Loaded user: charlie (ID: 5, Role: 1)
+[LOG] Loaded user: admin (ID: 35, Role: 3)
+[LOG] Loaded user: mod (ID: 36, Role: 2)
+[LOG] Loaded user: user1 (ID: 37, Role: 2)
+[LOG] Loaded user: user2 (ID: 38, Role: 2)
+[LOG] Loaded 9 users from database
+[LOG] load_channels_from_db: Loading channels from database...
+[LOG] load_channels_from_db: Found 8 channels in database
+[LOG] Loaded channel: general (Type: public, Creator: 1)
+[LOG] Loaded channel: random (Type: public, Creator: 1)
+[LOG] Loaded channel: private (Type: private, Creator: 1)
+[LOG] Loaded channel: channel1 (Type: public, Creator: 35)
+[LOG] Loaded channel: testchannel (Type: public, Creator: 35)
+[LOG] Loaded channel: testchannel2 (Type: public, Creator: 35)
+[LOG] Loaded channel: new (Type: cha, Creator: 35)
+[LOG] Loaded channel: admin (Type: private, Creator: 35)
+[LOG] Loaded 8 channels from database
+[LOG] Server initialized successfully. Listening on port 8082
+[LOG] Type Ctrl+C to stop the server
+
+[TEST] Running basic functionality test...
+[TEST] Database connected and tables initialized
+[TEST] Successfully stored test message (ID: 86)
+[LOG] Server ready and waiting for connections
+[LOG] New connection accepted
+[LOG] Received message from client: LOGIN:user1:password
+[LOG] User user1 authenticated successfully with role 2
+[LOG] Added client user1 (socket: 7)
+[LOG] Received message from client: MSG:general:hello
+[LOG] db_is_user_muted: Checking if user user1 is muted in channel general
+[LOG] Broadcasted message from user1 to channel general
+[LOG] New connection accepted
+[LOG] Received message from client: LOGIN:user2:password
+[LOG] User user2 authenticated successfully with role 2
+[LOG] Added client user2 (socket: 8)
+[LOG] Received message from client: MSG:general:hello
+[LOG] db_is_user_muted: Checking if user user2 is muted in channel general
+[LOG] Broadcasted message from user2 to channel general
+[LOG] Received message from client: LIST_CHANNELS
+[LOG] db_list_channels: Listing all channels
+[LOG] Received message from client: CHANNEL:channel1
+
+[LOG] User user2 switched to channel channel1
+[LOG] Received message from client: LIST_CHANNELS
+[LOG] db_list_channels: Listing all channels
+[LOG] Received message from client: CHANNEL:channel1
+
+[LOG] User user1 switched to channel channel1
+[LOG] Received message from client: MSG:channel1:Hello there
+[LOG] db_is_user_muted: Checking if user user1 is muted in channel channel1
+[LOG] Broadcasted message from user1 to channel channel1
+[LOG] Received message from client: PRIVMSG:user2:Hello there
+[LOG] db_send_private_message: From 'user1' to 'user2'
+NOTICE:  relation "private_messages" already exists, skipping
+[LOG] Private message from 'user1' to 'user2' stored with ID 8
+[LOG] Delivered private message from user1 to user2
+[LOG] Received message from client: PRIVMSG:user1:Hi
+[LOG] db_send_private_message: From 'user2' to 'user1'
+NOTICE:  relation "private_messages" already exists, skipping
+[LOG] Private message from 'user2' to 'user1' stored with ID 9
+[LOG] Delivered private message from user2 to user1
+[LOG] Received message from client: MUTE:user2:channel1:1
+[LOG] db_mute_user: Muting user user2 in channel channel1 (duration: 1)
+[LOG] Received message from client: MSG:channel1:hello
+[LOG] db_is_user_muted: Checking if user user2 is muted in channel channel1
+[LOG] User user2 is muted in channel channel1
+[LOG] Received message from client: LIST_CHANNELS
+[LOG] db_list_channels: Listing all channels
+[LOG] Received message from client: CHANNEL:random
+
+[LOG] User user2 switched to channel random
+[LOG] Received message from client: MSG:random:Hello
+[LOG] db_is_user_muted: Checking if user user2 is muted in channel random
+[LOG] Broadcasted message from user2 to channel random
+[LOG] Received message from client: CHANNEL:random
+
+[LOG] User user1 switched to channel random
+[LOG] Received message from client: MSG:random:Hello
+[LOG] db_is_user_muted: Checking if user user1 is muted in channel random
+[LOG] Broadcasted message from user1 to channel random
+[LOG] New connection accepted
+[LOG] Received message from client: LOGIN:admin:password
+[LOG] User admin authenticated successfully with role 3
+[LOG] Added client admin (socket: 9)
+[LOG] Received message from client: CREATE_CHANNEL:channel3:public
+[LOG] db_create_channel: Creating public channel 'channel3' by user ID 35
+[LOG] Channel 'channel3' created successfully
+[LOG] load_channels_from_db: Loading channels from database...
+[LOG] load_channels_from_db: Found 9 channels in database
+[LOG] Loaded channel: general (Type: public, Creator: 1)
+[LOG] Loaded channel: random (Type: public, Creator: 1)
+[LOG] Loaded channel: private (Type: private, Creator: 1)
+[LOG] Loaded channel: channel1 (Type: public, Creator: 35)
+[LOG] Loaded channel: testchannel (Type: public, Creator: 35)
+[LOG] Loaded channel: testchannel2 (Type: public, Creator: 35)
+[LOG] Loaded channel: new (Type: cha, Creator: 35)
+[LOG] Loaded channel: admin (Type: private, Creator: 35)
+[LOG] Loaded channel: channel3 (Type: public, Creator: 35)
+[LOG] Loaded 9 channels from database
+[LOG] Received message from client: DELETE_CHANNEL:channel3
+[LOG] db_delete_channel: Deleting channel 'channel3'
+[LOG] Channel 'channel3' deleted successfully
+[LOG] load_channels_from_db: Loading channels from database...
+[LOG] load_channels_from_db: Found 8 channels in database
+[LOG] Loaded channel: general (Type: public, Creator: 1)
+[LOG] Loaded channel: random (Type: public, Creator: 1)
+[LOG] Loaded channel: private (Type: private, Creator: 1)
+[LOG] Loaded channel: channel1 (Type: public, Creator: 35)
+[LOG] Loaded channel: testchannel (Type: public, Creator: 35)
+[LOG] Loaded channel: testchannel2 (Type: public, Creator: 35)
+[LOG] Loaded channel: new (Type: cha, Creator: 35)
+[LOG] Loaded channel: admin (Type: private, Creator: 35)
+[LOG] Loaded 8 channels from database
+[LOG] Received message from client: SET_ROLE:user2:2
+[LOG] db_set_user_role: Setting user 'user2' to role 2
+[LOG] User 'user2' role set to 2 successfully
+[LOG] load_users_from_db: Loading users from database...
+[LOG] load_users_from_db: Found 9 users in database
+[LOG] Loaded user: test_user (ID: 1, Role: 1)
+[LOG] Loaded user: testuser (ID: 2, Role: 1)
+[LOG] Loaded user: alice (ID: 3, Role: 1)
+[LOG] Loaded user: bob (ID: 4, Role: 1)
+[LOG] Loaded user: charlie (ID: 5, Role: 1)
+[LOG] Loaded user: admin (ID: 35, Role: 3)
+[LOG] Loaded user: mod (ID: 36, Role: 2)
+[LOG] Loaded user: user1 (ID: 37, Role: 2)
+[LOG] Loaded user: user2 (ID: 38, Role: 2)
+[LOG] Loaded 9 users from database
+[LOG] Received message from client: SET_ROLE:user1:1
+[LOG] db_set_user_role: Setting user 'user1' to role 1
+[LOG] User 'user1' role set to 1 successfully
+[LOG] load_users_from_db: Loading users from database...
+[LOG] load_users_from_db: Found 9 users in database
+[LOG] Loaded user: test_user (ID: 1, Role: 1)
+[LOG] Loaded user: testuser (ID: 2, Role: 1)
+[LOG] Loaded user: alice (ID: 3, Role: 1)
+[LOG] Loaded user: bob (ID: 4, Role: 1)
+[LOG] Loaded user: charlie (ID: 5, Role: 1)
+[LOG] Loaded user: admin (ID: 35, Role: 3)
+[LOG] Loaded user: mod (ID: 36, Role: 2)
+[LOG] Loaded user: user1 (ID: 37, Role: 1)
+[LOG] Loaded user: user2 (ID: 38, Role: 2)
+[LOG] Loaded 9 users from database
+[LOG] Client disconnected
+[LOG] Client disconnected
+[LOG] Client disconnected

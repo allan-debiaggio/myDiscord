@@ -1,0 +1,22 @@
+CC = gcc
+CFLAGS = -Wall -I/opt/homebrew/opt/libpq/include
+LDFLAGS = -L/opt/homebrew/opt/libpq/lib -lpq -lpthread
+
+all: server_db_test client_test
+
+server_db_test: server_db_test.c
+	$(CC) $(CFLAGS) -o server_db_test server_db_test.c $(LDFLAGS)
+
+client_test: client_test.c
+	$(CC) $(CFLAGS) -o client_test client_test.c
+
+clean:
+	rm -f server_db_test client_test *.o
+
+run_server:
+	./server_db_test
+
+run_client:
+	./client_test
+
+.PHONY: all clean run_server run_client 
