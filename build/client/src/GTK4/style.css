@@ -1,8 +1,10 @@
 .window {
-    background-image: url("../../GTK4/model/register_background.png");
+    background: radial-gradient(circle at center, #4a1212 0%, #1a1a1a 100%);
     background-repeat: no-repeat;
-    background-size: 800px 600px;
+    background-size: 100% 100%;  /* Changed from 800px 600px */
     background-position: center;
+    min-height: 600px;
+    min-width: 800px;
 }
 
 entry {
@@ -10,7 +12,7 @@ entry {
     border: none;
     border-radius: 25px;
     padding: 12px 20px;
-    margin: 8px 0;
+    margin: 5px 0;      /* Réduit l'espacement entre les champs */
     color: rgb(245, 245, 245);
     min-height: 45px;
     font-size: 14px;
@@ -24,19 +26,43 @@ entry:focus {
 .login-box {
     background-color: rgba(77, 77, 77, 0.95);
     border-radius: 15px;
-    padding: 30px;
-    margin: 20px;
-    min-width: 320px;
-}
-
-.logo-box {
-    min-width: 200px;
-    min-height: 60px;
+    padding: 25px;  
     margin: 0;
-    padding: 0;
+    min-width: 320px;
+    height: 100%;      /* Added */
 }
 
-.logo-box picture {
-    min-width: 100%;
-    min-height: 100%;
+.text-14 {
+    color: rgb(245, 245, 245);  
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;    /* Réduit la marge supérieure */
+    margin-bottom: 20px; /* Réduit la marge inférieure */
+}
+
+.back-4, .enter-2 {
+    background-color: rgba(44, 44, 44, 0.95);
+    border: none;
+    border-radius: 25px;
+    padding: 8px 15px;
+    color: rgb(245, 245, 245);
+    margin-top: 10px;
+    min-height: 45px;
+    min-width: 100px;
+}
+
+/* Ajout des états hover et active pour les boutons */
+.back-4:hover, .enter-2:hover {
+    background-color: rgba(54, 54, 54, 0.95);
+}
+
+.back-4:active, .enter-2:active {
+    background-color: rgba(34, 34, 34, 0.95);
+}
+
+/* Style pour enlever le fond blanc par défaut */
+button {
+    background: none;
+    box-shadow: none;
+    -gtk-icon-shadow: none;
 }

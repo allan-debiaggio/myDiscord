@@ -1,16 +1,20 @@
+/* Main window general styles */
 .window {
-    background-image: url("../../GTK4/model/register_background.png");
+    background: radial-gradient(circle at center, #4a1212 0%, #1a1a1a 100%);
     background-repeat: no-repeat;
-    background-size: 800px 600px;
+    background-size: 100% 100%;  
     background-position: center;
+    min-height: 600px;
+    min-width: 800px;
 }
 
+/* Input field styles */
 entry {
     background-color: rgba(44, 44, 44, 0.95);
     border: none;
     border-radius: 25px;
     padding: 12px 20px;
-    margin: 8px 0;
+    margin: 5px 0;     
     color: rgb(245, 245, 245);
     min-height: 45px;
     font-size: 14px;
@@ -21,22 +25,172 @@ entry:focus {
     outline: none;
 }
 
-.login-box {
+/* Login and register box styles */
+.login-box, .connect-box {
     background-color: rgba(77, 77, 77, 0.95);
     border-radius: 15px;
-    padding: 30px;
-    margin: 20px;
+    padding: 25px;  
+    margin: 0;
     min-width: 320px;
 }
 
-.logo-box {
-    min-width: 200px;
-    min-height: 60px;
-    margin: 0;
-    padding: 0;
+/* Text styles */
+.text-14 {
+    color: rgb(245, 245, 245);  
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;    
+    margin-bottom: 20px; 
 }
 
-.logo-box picture {
-    min-width: 100%;
-    min-height: 100%;
+/* Standard button styles */
+.back-4, .enter-2 {
+    background-color: rgba(44, 44, 44, 0.95);
+    border: none;
+    border-radius: 25px;
+    padding: 8px 15px;
+    color: rgb(245, 245, 245);
+    margin-top: 10px;
+    min-height: 45px;
+    min-width: 100px;
+}
+
+/* Button states */
+.back-4:hover, .enter-2:hover {
+    background-color: rgba(54, 54, 54, 0.95);
+}
+
+.back-4:active, .enter-2:active {
+    background-color: rgba(34, 34, 34, 0.95);
+}
+
+/* Reset default button styles */
+button {
+    background: none;
+    box-shadow: none;
+    -gtk-icon-shadow: none;
+}
+
+/* Login page styles */
+.connect-container {
+    background: url("../../GTK4/model/connect_background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Left sidebar styles */
+.left-panel {
+    background-color: rgba(77, 77, 77, 0.95);
+    border-right: 1px solid rgba(60, 60, 60, 0.95);
+}
+
+/* Friends list styles */
+.friends-title {
+    color: rgb(245, 245, 245);
+    font-size: 16px;
+    padding: 15px 10px;
+    font-weight: bold;
+    background-color: rgba(54, 54, 54, 0.95);
+    width: 100%;
+}
+
+.friend-row {
+    padding: 10px;
+    border-bottom: 1px solid rgba(60, 60, 60, 0.95);
+}
+
+/* User profile styles */
+.user-profile-btn {
+    padding: 15px 10px;
+    background-color: rgba(54, 54, 54, 0.95);
+    color: rgb(245, 245, 245);
+    border: none;
+    width: 100%;
+    text-align: start;
+}
+
+/* Message area styles */
+.message-area {
+    background-color: rgba(44, 44, 44, 0.95);
+    color: rgb(245, 245, 245);
+    margin: 10px;
+    border-radius: 5px;
+}
+
+/* Action button styles (inbox and add friend) */
+.inbox-btn, .add-friend-btn {
+    background: none;
+    border: none;
+    padding: 5px;
+    min-height: 50px;  
+    min-width: 50px;   
+    border-radius: 5px;
+}
+
+.inbox-btn:hover, .add-friend-btn:hover {
+    background-color: rgba(54, 54, 54, 0.95);
+    transition: background-color 0.3s ease;
+}
+
+.inbox-btn:active, .add-friend-btn:active {
+    background-color: rgba(34, 34, 34, 0.95);
+}
+
+/* Right sidebar styles */
+.right-panel {
+    background-color: rgba(77, 77, 77, 0.95);
+    border-left: 1px solid rgba(60, 60, 60, 0.95);
+}
+
+/* Add friend dialog styles */
+.add-friend-dialog {
+    background-color: rgba(44, 44, 44, 0.95);
+    border-radius: 8px;
+}
+
+.add-friend-content {
+    padding: 20px;
+    spacing: 15px;
+}
+
+/* Dialog element styles */
+.dialog-title {
+    color: rgb(245, 245, 245);
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.dialog-description {
+    color: rgb(200, 200, 200);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.dialog-entry {
+    background-color: rgba(34, 34, 34, 0.95);
+    border: none;
+    border-radius: 4px;
+    color: rgb(245, 245, 245);
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+/* Dialog button styles */
+dialog .button {
+    background-color: rgb(88, 101, 242);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 8px 16px;
+    margin: 5px;
+    font-weight: bold;
+}
+
+/* Server separator */
+.server-separator {
+    background-color: #4a1212;
+    min-height: 2px;
+    margin: 0 10px;
 }

@@ -152,6 +152,102 @@ client/src/GTK4/main_ui.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\client.dir\build.make CMakeFiles/client.dir/client/src/GTK4/main_ui.c.s
 .PHONY : client/src/GTK4/main_ui.c.s
 
+client/src/GTK4/pages/chat_friends_page.obj: client/src/GTK4/pages/chat_friends_page.c.obj
+.PHONY : client/src/GTK4/pages/chat_friends_page.obj
+
+# target to build an object file
+client/src/GTK4/pages/chat_friends_page.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\client.dir\build.make CMakeFiles/client.dir/client/src/GTK4/pages/chat_friends_page.c.obj
+.PHONY : client/src/GTK4/pages/chat_friends_page.c.obj
+
+client/src/GTK4/pages/chat_friends_page.i: client/src/GTK4/pages/chat_friends_page.c.i
+.PHONY : client/src/GTK4/pages/chat_friends_page.i
+
+# target to preprocess a source file
+client/src/GTK4/pages/chat_friends_page.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\client.dir\build.make CMakeFiles/client.dir/client/src/GTK4/pages/chat_friends_page.c.i
+.PHONY : client/src/GTK4/pages/chat_friends_page.c.i
+
+client/src/GTK4/pages/chat_friends_page.s: client/src/GTK4/pages/chat_friends_page.c.s
+.PHONY : client/src/GTK4/pages/chat_friends_page.s
+
+# target to generate assembly for a file
+client/src/GTK4/pages/chat_friends_page.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\client.dir\build.make CMakeFiles/client.dir/client/src/GTK4/pages/chat_friends_page.c.s
+.PHONY : client/src/GTK4/pages/chat_friends_page.c.s
+
+client/src/GTK4/pages/chat_server_page.obj: client/src/GTK4/pages/chat_server_page.c.obj
+.PHONY : client/src/GTK4/pages/chat_server_page.obj
+
+# target to build an object file
+client/src/GTK4/pages/chat_server_page.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\client.dir\build.make CMakeFiles/client.dir/client/src/GTK4/pages/chat_server_page.c.obj
+.PHONY : client/src/GTK4/pages/chat_server_page.c.obj
+
+client/src/GTK4/pages/chat_server_page.i: client/src/GTK4/pages/chat_server_page.c.i
+.PHONY : client/src/GTK4/pages/chat_server_page.i
+
+# target to preprocess a source file
+client/src/GTK4/pages/chat_server_page.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\client.dir\build.make CMakeFiles/client.dir/client/src/GTK4/pages/chat_server_page.c.i
+.PHONY : client/src/GTK4/pages/chat_server_page.c.i
+
+client/src/GTK4/pages/chat_server_page.s: client/src/GTK4/pages/chat_server_page.c.s
+.PHONY : client/src/GTK4/pages/chat_server_page.s
+
+# target to generate assembly for a file
+client/src/GTK4/pages/chat_server_page.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\client.dir\build.make CMakeFiles/client.dir/client/src/GTK4/pages/chat_server_page.c.s
+.PHONY : client/src/GTK4/pages/chat_server_page.c.s
+
+client/src/GTK4/pages/connect_page.obj: client/src/GTK4/pages/connect_page.c.obj
+.PHONY : client/src/GTK4/pages/connect_page.obj
+
+# target to build an object file
+client/src/GTK4/pages/connect_page.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\client.dir\build.make CMakeFiles/client.dir/client/src/GTK4/pages/connect_page.c.obj
+.PHONY : client/src/GTK4/pages/connect_page.c.obj
+
+client/src/GTK4/pages/connect_page.i: client/src/GTK4/pages/connect_page.c.i
+.PHONY : client/src/GTK4/pages/connect_page.i
+
+# target to preprocess a source file
+client/src/GTK4/pages/connect_page.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\client.dir\build.make CMakeFiles/client.dir/client/src/GTK4/pages/connect_page.c.i
+.PHONY : client/src/GTK4/pages/connect_page.c.i
+
+client/src/GTK4/pages/connect_page.s: client/src/GTK4/pages/connect_page.c.s
+.PHONY : client/src/GTK4/pages/connect_page.s
+
+# target to generate assembly for a file
+client/src/GTK4/pages/connect_page.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\client.dir\build.make CMakeFiles/client.dir/client/src/GTK4/pages/connect_page.c.s
+.PHONY : client/src/GTK4/pages/connect_page.c.s
+
+client/src/GTK4/pages/register_page.obj: client/src/GTK4/pages/register_page.c.obj
+.PHONY : client/src/GTK4/pages/register_page.obj
+
+# target to build an object file
+client/src/GTK4/pages/register_page.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\client.dir\build.make CMakeFiles/client.dir/client/src/GTK4/pages/register_page.c.obj
+.PHONY : client/src/GTK4/pages/register_page.c.obj
+
+client/src/GTK4/pages/register_page.i: client/src/GTK4/pages/register_page.c.i
+.PHONY : client/src/GTK4/pages/register_page.i
+
+# target to preprocess a source file
+client/src/GTK4/pages/register_page.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\client.dir\build.make CMakeFiles/client.dir/client/src/GTK4/pages/register_page.c.i
+.PHONY : client/src/GTK4/pages/register_page.c.i
+
+client/src/GTK4/pages/register_page.s: client/src/GTK4/pages/register_page.c.s
+.PHONY : client/src/GTK4/pages/register_page.s
+
+# target to generate assembly for a file
+client/src/GTK4/pages/register_page.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\client.dir\build.make CMakeFiles/client.dir/client/src/GTK4/pages/register_page.c.s
+.PHONY : client/src/GTK4/pages/register_page.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -164,6 +260,18 @@ help:
 	@echo ... client/src/GTK4/main_ui.obj
 	@echo ... client/src/GTK4/main_ui.i
 	@echo ... client/src/GTK4/main_ui.s
+	@echo ... client/src/GTK4/pages/chat_friends_page.obj
+	@echo ... client/src/GTK4/pages/chat_friends_page.i
+	@echo ... client/src/GTK4/pages/chat_friends_page.s
+	@echo ... client/src/GTK4/pages/chat_server_page.obj
+	@echo ... client/src/GTK4/pages/chat_server_page.i
+	@echo ... client/src/GTK4/pages/chat_server_page.s
+	@echo ... client/src/GTK4/pages/connect_page.obj
+	@echo ... client/src/GTK4/pages/connect_page.i
+	@echo ... client/src/GTK4/pages/connect_page.s
+	@echo ... client/src/GTK4/pages/register_page.obj
+	@echo ... client/src/GTK4/pages/register_page.i
+	@echo ... client/src/GTK4/pages/register_page.s
 .PHONY : help
 
 

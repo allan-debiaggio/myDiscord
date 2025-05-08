@@ -15,7 +15,6 @@
 		[
 			"add_executable",
 			"target_link_libraries",
-			"add_definitions",
 			"include_directories"
 		],
 		"files" : 
@@ -30,31 +29,25 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 22,
+				"line" : 12,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 35,
+				"line" : 20,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 13,
+				"line" : 8,
 				"parent" : 0
 			},
 			{
-				"command" : 3,
+				"command" : 2,
 				"file" : 0,
-				"line" : 11,
-				"parent" : 0
-			},
-			{
-				"command" : 3,
-				"file" : 0,
-				"line" : 32,
+				"line" : 9,
 				"parent" : 0
 			}
 		]
@@ -65,18 +58,15 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -std=gnu11   -mfpmath=sse -msse -msse2"
-				}
-			],
-			"defines" : 
-			[
-				{
-					"backtrace" : 3,
-					"define" : "LIBDEFLATE_DLL"
+					"fragment" : "-g"
 				}
 			],
 			"includes" : 
 			[
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/titaL/Documents/GitHub/myDiscord/client/src/GTK4"
+				},
 				{
 					"backtrace" : 4,
 					"path" : "C:/msys64/ucrt64/bin/../include/gtk-4.0"
@@ -132,24 +122,16 @@
 				{
 					"backtrace" : 4,
 					"path" : "C:/msys64/ucrt64/bin/../lib/glib-2.0/include"
-				},
-				{
-					"backtrace" : 5,
-					"path" : "C:/Users/titaL/Documents/GitHub/myDiscord/client/include"
 				}
 			],
 			"language" : "C",
-			"languageStandard" : 
-			{
-				"backtraces" : 
-				[
-					1
-				],
-				"standard" : "11"
-			},
 			"sourceIndexes" : 
 			[
-				0
+				0,
+				1,
+				2,
+				3,
+				4
 			]
 		}
 	],
@@ -252,7 +234,11 @@
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				0
+				0,
+				1,
+				2,
+				3,
+				4
 			]
 		}
 	],
@@ -262,6 +248,30 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "client/src/GTK4/main_ui.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "client/src/GTK4/pages/connect_page.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "client/src/GTK4/pages/register_page.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "client/src/GTK4/pages/chat_friends_page.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "client/src/GTK4/pages/chat_server_page.c",
 			"sourceGroupIndex" : 0
 		}
 	],

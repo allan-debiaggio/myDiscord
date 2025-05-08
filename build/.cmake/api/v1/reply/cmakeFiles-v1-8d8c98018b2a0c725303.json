@@ -157,7 +157,16 @@
 			"path" : "C:/Program Files/CMake/share/cmake-4.0/Modules/FindPackageMessage.cmake"
 		},
 		{
-			"path" : "client/src/GTK4/style.css"
+			"path" : "client/src/GTK4/model/profil.png"
+		},
+		{
+			"path" : "client/src/GTK4/model/inbox.png"
+		},
+		{
+			"path" : "client/src/GTK4/model/add_friend_icon.png"
+		},
+		{
+			"path" : "client/src/GTK4/model/pas_content.png"
 		}
 	],
 	"kind" : "cmakeFiles",

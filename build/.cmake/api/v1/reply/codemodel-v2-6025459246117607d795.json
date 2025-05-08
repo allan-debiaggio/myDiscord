@@ -27,7 +27,7 @@
 					[
 						0
 					],
-					"name" : "mon_app",
+					"name" : "Dispute",
 					"targetIndexes" : 
 					[
 						0
@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "client::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-client-Debug-25a65a302ce739f04105.json",
+					"jsonFile" : "target-client-Debug-08453ff4823a2dedb569.json",
 					"name" : "client",
 					"projectIndex" : 0
 				}

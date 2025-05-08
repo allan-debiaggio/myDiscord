@@ -1,8 +1,32 @@
 [
 {
   "directory": "C:/Users/titaL/Documents/GitHub/myDiscord/build",
-  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DLIBDEFLATE_DLL @CMakeFiles/client.dir/includes_C.rsp -g -std=gnu11   -mfpmath=sse -msse -msse2 -o CMakeFiles\\client.dir\\client\\src\\GTK4\\main_ui.c.obj -c C:\\Users\\titaL\\Documents\\GitHub\\myDiscord\\client\\src\\GTK4\\main_ui.c",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe  @CMakeFiles/client.dir/includes_C.rsp -g -o CMakeFiles\\client.dir\\client\\src\\GTK4\\main_ui.c.obj -c C:\\Users\\titaL\\Documents\\GitHub\\myDiscord\\client\\src\\GTK4\\main_ui.c",
   "file": "C:/Users/titaL/Documents/GitHub/myDiscord/client/src/GTK4/main_ui.c",
   "output": "CMakeFiles/client.dir/client/src/GTK4/main_ui.c.obj"
+},
+{
+  "directory": "C:/Users/titaL/Documents/GitHub/myDiscord/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe  @CMakeFiles/client.dir/includes_C.rsp -g -o CMakeFiles\\client.dir\\client\\src\\GTK4\\pages\\connect_page.c.obj -c C:\\Users\\titaL\\Documents\\GitHub\\myDiscord\\client\\src\\GTK4\\pages\\connect_page.c",
+  "file": "C:/Users/titaL/Documents/GitHub/myDiscord/client/src/GTK4/pages/connect_page.c",
+  "output": "CMakeFiles/client.dir/client/src/GTK4/pages/connect_page.c.obj"
+},
+{
+  "directory": "C:/Users/titaL/Documents/GitHub/myDiscord/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe  @CMakeFiles/client.dir/includes_C.rsp -g -o CMakeFiles\\client.dir\\client\\src\\GTK4\\pages\\register_page.c.obj -c C:\\Users\\titaL\\Documents\\GitHub\\myDiscord\\client\\src\\GTK4\\pages\\register_page.c",
+  "file": "C:/Users/titaL/Documents/GitHub/myDiscord/client/src/GTK4/pages/register_page.c",
+  "output": "CMakeFiles/client.dir/client/src/GTK4/pages/register_page.c.obj"
+},
+{
+  "directory": "C:/Users/titaL/Documents/GitHub/myDiscord/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe  @CMakeFiles/client.dir/includes_C.rsp -g -o CMakeFiles\\client.dir\\client\\src\\GTK4\\pages\\chat_friends_page.c.obj -c C:\\Users\\titaL\\Documents\\GitHub\\myDiscord\\client\\src\\GTK4\\pages\\chat_friends_page.c",
+  "file": "C:/Users/titaL/Documents/GitHub/myDiscord/client/src/GTK4/pages/chat_friends_page.c",
+  "output": "CMakeFiles/client.dir/client/src/GTK4/pages/chat_friends_page.c.obj"
+},
+{
+  "directory": "C:/Users/titaL/Documents/GitHub/myDiscord/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe  @CMakeFiles/client.dir/includes_C.rsp -g -o CMakeFiles\\client.dir\\client\\src\\GTK4\\pages\\chat_server_page.c.obj -c C:\\Users\\titaL\\Documents\\GitHub\\myDiscord\\client\\src\\GTK4\\pages\\chat_server_page.c",
+  "file": "C:/Users/titaL/Documents/GitHub/myDiscord/client/src/GTK4/pages/chat_server_page.c",
+  "output": "CMakeFiles/client.dir/client/src/GTK4/pages/chat_server_page.c.obj"
 }
 ]

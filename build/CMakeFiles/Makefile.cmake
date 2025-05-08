@@ -39,7 +39,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/4.0.1/CMakeCCompiler.cmake"
   "CMakeFiles/4.0.1/CMakeRCCompiler.cmake"
   "CMakeFiles/4.0.1/CMakeSystem.cmake"
-  "C:/Users/titaL/Documents/GitHub/myDiscord/client/src/GTK4/style.css"
+  "C:/Users/titaL/Documents/GitHub/myDiscord/client/src/GTK4/model/add_friend_icon.png"
+  "C:/Users/titaL/Documents/GitHub/myDiscord/client/src/GTK4/model/inbox.png"
+  "C:/Users/titaL/Documents/GitHub/myDiscord/client/src/GTK4/model/pas_content.png"
+  "C:/Users/titaL/Documents/GitHub/myDiscord/client/src/GTK4/model/profil.png"
   )
 
 # The corresponding makefile is:
@@ -50,7 +53,10 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
-  "client/src/GTK4/style.css"
+  "client/src/GTK4/model/profil.png"
+  "client/src/GTK4/model/inbox.png"
+  "client/src/GTK4/model/add_friend_icon.png"
+  "client/src/GTK4/model/pas_content.png"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 

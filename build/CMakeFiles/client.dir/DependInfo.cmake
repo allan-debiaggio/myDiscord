@@ -9,6 +9,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/titaL/Documents/GitHub/myDiscord/client/src/GTK4/main_ui.c" "CMakeFiles/client.dir/client/src/GTK4/main_ui.c.obj" "gcc" "CMakeFiles/client.dir/client/src/GTK4/main_ui.c.obj.d"
+  "C:/Users/titaL/Documents/GitHub/myDiscord/client/src/GTK4/pages/chat_friends_page.c" "CMakeFiles/client.dir/client/src/GTK4/pages/chat_friends_page.c.obj" "gcc" "CMakeFiles/client.dir/client/src/GTK4/pages/chat_friends_page.c.obj.d"
+  "C:/Users/titaL/Documents/GitHub/myDiscord/client/src/GTK4/pages/chat_server_page.c" "CMakeFiles/client.dir/client/src/GTK4/pages/chat_server_page.c.obj" "gcc" "CMakeFiles/client.dir/client/src/GTK4/pages/chat_server_page.c.obj.d"
+  "C:/Users/titaL/Documents/GitHub/myDiscord/client/src/GTK4/pages/connect_page.c" "CMakeFiles/client.dir/client/src/GTK4/pages/connect_page.c.obj" "gcc" "CMakeFiles/client.dir/client/src/GTK4/pages/connect_page.c.obj.d"
+  "C:/Users/titaL/Documents/GitHub/myDiscord/client/src/GTK4/pages/register_page.c" "CMakeFiles/client.dir/client/src/GTK4/pages/register_page.c.obj" "gcc" "CMakeFiles/client.dir/client/src/GTK4/pages/register_page.c.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

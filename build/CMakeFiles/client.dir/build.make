@@ -86,19 +86,87 @@ CMakeFiles/client.dir/client/src/GTK4/main_ui.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/client.dir/client/src/GTK4/main_ui.c.s"
 	C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\titaL\Documents\GitHub\myDiscord\client\src\GTK4\main_ui.c -o CMakeFiles\client.dir\client\src\GTK4\main_ui.c.s
 
+CMakeFiles/client.dir/client/src/GTK4/pages/connect_page.c.obj: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/client/src/GTK4/pages/connect_page.c.obj: CMakeFiles/client.dir/includes_C.rsp
+CMakeFiles/client.dir/client/src/GTK4/pages/connect_page.c.obj: C:/Users/titaL/Documents/GitHub/myDiscord/client/src/GTK4/pages/connect_page.c
+CMakeFiles/client.dir/client/src/GTK4/pages/connect_page.c.obj: CMakeFiles/client.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\titaL\Documents\GitHub\myDiscord\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/client.dir/client/src/GTK4/pages/connect_page.c.obj"
+	C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/client.dir/client/src/GTK4/pages/connect_page.c.obj -MF CMakeFiles\client.dir\client\src\GTK4\pages\connect_page.c.obj.d -o CMakeFiles\client.dir\client\src\GTK4\pages\connect_page.c.obj -c C:\Users\titaL\Documents\GitHub\myDiscord\client\src\GTK4\pages\connect_page.c
+
+CMakeFiles/client.dir/client/src/GTK4/pages/connect_page.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/client.dir/client/src/GTK4/pages/connect_page.c.i"
+	C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\titaL\Documents\GitHub\myDiscord\client\src\GTK4\pages\connect_page.c > CMakeFiles\client.dir\client\src\GTK4\pages\connect_page.c.i
+
+CMakeFiles/client.dir/client/src/GTK4/pages/connect_page.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/client.dir/client/src/GTK4/pages/connect_page.c.s"
+	C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\titaL\Documents\GitHub\myDiscord\client\src\GTK4\pages\connect_page.c -o CMakeFiles\client.dir\client\src\GTK4\pages\connect_page.c.s
+
+CMakeFiles/client.dir/client/src/GTK4/pages/register_page.c.obj: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/client/src/GTK4/pages/register_page.c.obj: CMakeFiles/client.dir/includes_C.rsp
+CMakeFiles/client.dir/client/src/GTK4/pages/register_page.c.obj: C:/Users/titaL/Documents/GitHub/myDiscord/client/src/GTK4/pages/register_page.c
+CMakeFiles/client.dir/client/src/GTK4/pages/register_page.c.obj: CMakeFiles/client.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\titaL\Documents\GitHub\myDiscord\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/client.dir/client/src/GTK4/pages/register_page.c.obj"
+	C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/client.dir/client/src/GTK4/pages/register_page.c.obj -MF CMakeFiles\client.dir\client\src\GTK4\pages\register_page.c.obj.d -o CMakeFiles\client.dir\client\src\GTK4\pages\register_page.c.obj -c C:\Users\titaL\Documents\GitHub\myDiscord\client\src\GTK4\pages\register_page.c
+
+CMakeFiles/client.dir/client/src/GTK4/pages/register_page.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/client.dir/client/src/GTK4/pages/register_page.c.i"
+	C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\titaL\Documents\GitHub\myDiscord\client\src\GTK4\pages\register_page.c > CMakeFiles\client.dir\client\src\GTK4\pages\register_page.c.i
+
+CMakeFiles/client.dir/client/src/GTK4/pages/register_page.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/client.dir/client/src/GTK4/pages/register_page.c.s"
+	C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\titaL\Documents\GitHub\myDiscord\client\src\GTK4\pages\register_page.c -o CMakeFiles\client.dir\client\src\GTK4\pages\register_page.c.s
+
+CMakeFiles/client.dir/client/src/GTK4/pages/chat_friends_page.c.obj: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/client/src/GTK4/pages/chat_friends_page.c.obj: CMakeFiles/client.dir/includes_C.rsp
+CMakeFiles/client.dir/client/src/GTK4/pages/chat_friends_page.c.obj: C:/Users/titaL/Documents/GitHub/myDiscord/client/src/GTK4/pages/chat_friends_page.c
+CMakeFiles/client.dir/client/src/GTK4/pages/chat_friends_page.c.obj: CMakeFiles/client.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\titaL\Documents\GitHub\myDiscord\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/client.dir/client/src/GTK4/pages/chat_friends_page.c.obj"
+	C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/client.dir/client/src/GTK4/pages/chat_friends_page.c.obj -MF CMakeFiles\client.dir\client\src\GTK4\pages\chat_friends_page.c.obj.d -o CMakeFiles\client.dir\client\src\GTK4\pages\chat_friends_page.c.obj -c C:\Users\titaL\Documents\GitHub\myDiscord\client\src\GTK4\pages\chat_friends_page.c
+
+CMakeFiles/client.dir/client/src/GTK4/pages/chat_friends_page.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/client.dir/client/src/GTK4/pages/chat_friends_page.c.i"
+	C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\titaL\Documents\GitHub\myDiscord\client\src\GTK4\pages\chat_friends_page.c > CMakeFiles\client.dir\client\src\GTK4\pages\chat_friends_page.c.i
+
+CMakeFiles/client.dir/client/src/GTK4/pages/chat_friends_page.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/client.dir/client/src/GTK4/pages/chat_friends_page.c.s"
+	C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\titaL\Documents\GitHub\myDiscord\client\src\GTK4\pages\chat_friends_page.c -o CMakeFiles\client.dir\client\src\GTK4\pages\chat_friends_page.c.s
+
+CMakeFiles/client.dir/client/src/GTK4/pages/chat_server_page.c.obj: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/client/src/GTK4/pages/chat_server_page.c.obj: CMakeFiles/client.dir/includes_C.rsp
+CMakeFiles/client.dir/client/src/GTK4/pages/chat_server_page.c.obj: C:/Users/titaL/Documents/GitHub/myDiscord/client/src/GTK4/pages/chat_server_page.c
+CMakeFiles/client.dir/client/src/GTK4/pages/chat_server_page.c.obj: CMakeFiles/client.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\titaL\Documents\GitHub\myDiscord\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/client.dir/client/src/GTK4/pages/chat_server_page.c.obj"
+	C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/client.dir/client/src/GTK4/pages/chat_server_page.c.obj -MF CMakeFiles\client.dir\client\src\GTK4\pages\chat_server_page.c.obj.d -o CMakeFiles\client.dir\client\src\GTK4\pages\chat_server_page.c.obj -c C:\Users\titaL\Documents\GitHub\myDiscord\client\src\GTK4\pages\chat_server_page.c
+
+CMakeFiles/client.dir/client/src/GTK4/pages/chat_server_page.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/client.dir/client/src/GTK4/pages/chat_server_page.c.i"
+	C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\titaL\Documents\GitHub\myDiscord\client\src\GTK4\pages\chat_server_page.c > CMakeFiles\client.dir\client\src\GTK4\pages\chat_server_page.c.i
+
+CMakeFiles/client.dir/client/src/GTK4/pages/chat_server_page.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/client.dir/client/src/GTK4/pages/chat_server_page.c.s"
+	C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\titaL\Documents\GitHub\myDiscord\client\src\GTK4\pages\chat_server_page.c -o CMakeFiles\client.dir\client\src\GTK4\pages\chat_server_page.c.s
+
 # Object files for target client
 client_OBJECTS = \
-"CMakeFiles/client.dir/client/src/GTK4/main_ui.c.obj"
+"CMakeFiles/client.dir/client/src/GTK4/main_ui.c.obj" \
+"CMakeFiles/client.dir/client/src/GTK4/pages/connect_page.c.obj" \
+"CMakeFiles/client.dir/client/src/GTK4/pages/register_page.c.obj" \
+"CMakeFiles/client.dir/client/src/GTK4/pages/chat_friends_page.c.obj" \
+"CMakeFiles/client.dir/client/src/GTK4/pages/chat_server_page.c.obj"
 
 # External object files for target client
 client_EXTERNAL_OBJECTS =
 
 client.exe: CMakeFiles/client.dir/client/src/GTK4/main_ui.c.obj
+client.exe: CMakeFiles/client.dir/client/src/GTK4/pages/connect_page.c.obj
+client.exe: CMakeFiles/client.dir/client/src/GTK4/pages/register_page.c.obj
+client.exe: CMakeFiles/client.dir/client/src/GTK4/pages/chat_friends_page.c.obj
+client.exe: CMakeFiles/client.dir/client/src/GTK4/pages/chat_server_page.c.obj
 client.exe: CMakeFiles/client.dir/build.make
 client.exe: CMakeFiles/client.dir/linkLibs.rsp
 client.exe: CMakeFiles/client.dir/objects1.rsp
 client.exe: CMakeFiles/client.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\titaL\Documents\GitHub\myDiscord\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable client.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\titaL\Documents\GitHub\myDiscord\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable client.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\client.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

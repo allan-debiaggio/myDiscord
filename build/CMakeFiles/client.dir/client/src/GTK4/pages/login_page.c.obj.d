@@ -1,5 +1,5 @@
-CMakeFiles/client.dir/client/src/GTK4/main_ui.c.obj: \
- C:\Users\titaL\Documents\GitHub\myDiscord\client\src\GTK4\main_ui.c \
+CMakeFiles/client.dir/client/src/GTK4/pages/login_page.c.obj: \
+ C:\Users\titaL\Documents\GitHub\myDiscord\client\src\GTK4\pages\login_page.c \
  C:/msys64/ucrt64/include/gtk-4.0/gtk/gtk.h \
  C:/msys64/ucrt64/include/gtk-4.0/gtk/css/gtkcss.h \
  C:/msys64/ucrt64/include/glib-2.0/glib.h \
@@ -760,9 +760,4 @@ CMakeFiles/client.dir/client/src/GTK4/main_ui.c.obj: \
  C:/msys64/ucrt64/include/gtk-4.0/gtk/gtkwindowcontrols.h \
  C:/msys64/ucrt64/include/gtk-4.0/gtk/gtkwindowgroup.h \
  C:/msys64/ucrt64/include/gtk-4.0/gtk/gtkwindowhandle.h \
- C:/msys64/ucrt64/include/unistd.h C:/msys64/ucrt64/include/io.h \
- C:/msys64/ucrt64/include/process.h \
- C:/msys64/ucrt64/include/corecrt_startup.h \
- C:/msys64/ucrt64/include/sys/types.h C:/msys64/ucrt64/include/getopt.h \
- C:/msys64/ucrt64/include/pthread_unistd.h \
- C:\Users\titaL\Documents\GitHub\myDiscord\client\src\GTK4\ui_utils.h
+ C:/Users/titaL/Documents/GitHub/myDiscord/client/src/GTK4/ui_utils.h
