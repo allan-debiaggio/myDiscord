@@ -1,6 +1,8 @@
 #include "my_dispute.h"
 #include "network.h"
 
+void display_see_you_soon_screen();
+
 AppState app_state;
 int network_connected = 0;
 
@@ -18,6 +20,9 @@ void initialize_app()
   // Set current indexes
   app_state.current_channel_index = 0;
   app_state.current_user_index = -1; // Not logged in yet
+
+  // Initialize quit flag
+  app_state.should_quit = 0;
 
   // Try to establish server connection early
   if (network_connect())
@@ -256,6 +261,8 @@ int main(int argc, char *argv[])
         handle_input(&app_state, input);
         input_pos = 0;
         memset(input, 0, MAX_INPUT_LEN);
+        if (app_state.should_quit)
+          break;
       }
       else if (current_focus == 0)
       {
@@ -290,6 +297,13 @@ int main(int argc, char *argv[])
       input[input_pos++] = ch;
       input[input_pos] = '\0';
     }
+    if (app_state.should_quit)
+      break;
+  }
+
+  if (app_state.should_quit)
+  {
+    display_see_you_soon_screen();
   }
 
   // Cleanup

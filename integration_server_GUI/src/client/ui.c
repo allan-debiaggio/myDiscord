@@ -1,4 +1,6 @@
 #include "my_dispute.h"
+#include <locale.h>
+#include <wchar.h>
 
 // ASCII art from the ascii-art.txt file
 static const char *logo[] = {
@@ -414,10 +416,97 @@ void cleanup_ui()
   endwin();
 }
 
+void display_see_you_soon_screen()
+{
+  setlocale(LC_ALL, ""); // Enable UTF-8 support for ncurses
+  clear();
+  refresh();
+  int max_y, max_x;
+  getmaxyx(stdscr, max_y, max_x);
+
+  // Read poney ASCII art as wide strings
+  FILE *poney_file = fopen("assets/poney-ascii.txt", "r");
+  FILE *soon_file = fopen("assets/see-you-soon-ascii.txt", "r");
+  if (!poney_file || !soon_file)
+  {
+    endwin();
+    fprintf(stderr, "Error: Could not open ASCII art files.\n");
+    exit(1);
+  }
+
+  wchar_t poney[40][128] = {0};
+  char soon[16][128] = {0};
+  int poney_lines = 0, soon_lines = 0;
+  char buffer[512];
+  while (fgets(buffer, sizeof(buffer), poney_file) && poney_lines < 40)
+  {
+    mbstowcs(poney[poney_lines], buffer, 128);
+    poney_lines++;
+  }
+  while (fgets(soon[soon_lines], sizeof(soon[soon_lines]), soon_file) && soon_lines < 16)
+    soon_lines++;
+  fclose(poney_file);
+  fclose(soon_file);
+
+  // Calculate vertical centering
+  int total_height = poney_lines + soon_lines;
+  int start_y = (max_y - total_height) / 2;
+
+  // Colors: silhouette = neon pink, background = neon yellow, title = neon green
+  start_color();
+  init_pair(20, COLOR_MAGENTA, COLOR_BLACK); // silhouette
+  init_pair(21, COLOR_YELLOW, COLOR_BLACK);  // background
+  init_pair(22, COLOR_CYAN, COLOR_BLACK);    // title
+
+  // Add more bright rainbow color pairs
+  init_pair(23, COLOR_WHITE, COLOR_BLACK);   // bright white
+  init_pair(24, COLOR_YELLOW, COLOR_BLACK);  // bright yellow
+  init_pair(25, COLOR_GREEN, COLOR_BLACK);   // bright green
+  init_pair(26, COLOR_CYAN, COLOR_BLACK);    // bright cyan
+  init_pair(27, COLOR_BLUE, COLOR_BLACK);    // bright blue
+  init_pair(28, COLOR_MAGENTA, COLOR_BLACK); // bright magenta
+
+  short rainbow_pairs[] = {23, 24, 25, 26, 27, 28};
+  int num_rainbow = sizeof(rainbow_pairs) / sizeof(rainbow_pairs[0]);
+
+  // Print poney art (wide, rainbow)
+  for (int i = 0; i < poney_lines; i++)
+  {
+    int len = wcslen(poney[i]);
+    int start_x = (max_x - len) / 2;
+    for (int j = 0; j < len; j++)
+    {
+      wchar_t ch = poney[i][j];
+      if (ch != L' ' && ch != L'\n')
+      {
+        int color_idx = (j + i) % num_rainbow;
+        wattron(stdscr, COLOR_PAIR(rainbow_pairs[color_idx]) | A_BOLD);
+        mvwaddch(stdscr, start_y + i, start_x + j, ch);
+        wattroff(stdscr, COLOR_PAIR(rainbow_pairs[color_idx]) | A_BOLD);
+      }
+    }
+  }
+  // Print see-you-soon art (ASCII)
+  for (int i = 0; i < soon_lines; i++)
+  {
+    int len = strlen(soon[i]);
+    int start_x = (max_x - len) / 2;
+    wattron(stdscr, COLOR_PAIR(22) | A_BOLD);
+    mvwprintw(stdscr, start_y + poney_lines + i, start_x, "%s", soon[i]);
+    wattroff(stdscr, COLOR_PAIR(22) | A_BOLD);
+  }
+  wrefresh(stdscr);
+  napms(2000);
+  getch();
+}
+
 void process_command(AppState *state, char *command)
 {
   // Skip the leading slash
   char *cmd = command + 1;
+
+  // Debug: print the received command
+  fprintf(stderr, "[DEBUG] process_command received: '%s'\n", cmd);
 
   if (strncmp(cmd, "msg ", 4) == 0)
   {
@@ -517,5 +606,9 @@ void process_command(AppState *state, char *command)
 
       set_user_role(state, username, role);
     }
+  }
+  else if (strcmp(cmd, "quit") == 0)
+  {
+    state->should_quit = 1;
   }
 }

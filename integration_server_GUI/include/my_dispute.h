@@ -83,6 +83,7 @@ typedef struct
   WINDOW *chat_win;
   WINDOW *input_win;
   WINDOW *users_win;
+  int should_quit;
 } AppState;
 
 // Function declarations
