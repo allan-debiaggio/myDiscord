@@ -1,0 +1,37 @@
+├── README.md
+├── Dockerfile
+├── Makefile
+├── .gitignore
+├── .DS_Store
+├── telegram-cloud-photo-size-2-5249219990660444918-y.jpg
+├── build/                # Compiled binaries and object files
+│   ├── my_dispute
+│   ├── my_dispute_server
+│   ├── *.o               # Object files for each source module
+│   └── ...               # Other build artifacts
+├── logs/                 # (Contents not listed, likely runtime logs)
+├── assets/               # ASCII art and UI assets
+│   ├── poney-ascii.txt
+│   ├── see-you-soon-ascii.txt
+│   ├── login-ascii.txt
+│   └── ascii-art.txt
+├── include/              # Header files for shared structures and APIs
+│   ├── my_dispute.h
+│   ├── network.h
+│   └── server.h
+└── src/                  # Main source code
+    ├── client/           # Client-side logic
+    │   ├── ui.c
+    │   ├── main.c
+    │   ├── messaging.c
+    │   ├── channels.c
+    │   ├── auth.c
+    │   └── users.c
+    ├── server/           # Server-side logic
+    │   ├── server_main.c
+    │   ├── server_handlers.c
+    │   └── server.c
+    ├── db/               # Database logic
+    ├── security/         # Security logic
+    └── shared/           # Shared code between client and server
+        └── network.c 
